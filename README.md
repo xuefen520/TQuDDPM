@@ -1,1 +1,1 @@
-# TQuDDPM
+# Source code of TQuDDPM
