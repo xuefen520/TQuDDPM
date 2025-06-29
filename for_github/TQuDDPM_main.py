@@ -49,9 +49,8 @@ parser.add_argument('--L', type=int, default=12)
 parser.add_argument('--lr', type=float, default=0.005)
 parser.add_argument('--weight_t0', type=float, default=1.0)
 
-# Ry-pi | Ry-pi | NN | NN_NN | Ry-Rz-pi | Ry-Rz-2pi
-# Ry-2pi | Rx-2pi | Embedding  |
-parser.add_argument('--Encode_type', type=str, default="NN")
+
+parser.add_argument('--Encode_type', type=str, default="NN")        # Ry-pi | NN |  Ry-Rz-pi | Ry-Rz-2pi
 
 parser.add_argument('--two_qubit_gate_type', type=str, default="CZ")
 parser.add_argument('--Topology', type=str, default="star")
