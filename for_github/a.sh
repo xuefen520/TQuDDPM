@@ -16,16 +16,15 @@
 #python TQuDDPM_main.py.py --na 2 --Encode_type "Rx-2pi" --L 6
 #python TQuDDPM_main.py.py --na 2 --Encode_type "Rx-pi" --L 6
 
-for s in 1
+
+for s in 7
 do
-for ltau in 1 2 3 4 5
+for l in 4 8 12 16 20
 do
-for l in 4 8
-do
-  python TQuDDPM_main.py.py --L_tau $ltau --n 1 --na 1 --T 5 --Ndata 100 --Encode_type "Embedding" --batch_size 4 --L $l --seed $s  --lr 0.0005 --weight_t0 0.01  --problem "cluster" --loss_type "MMD" --epochs 20000
+  python Generation_data_circle.py --n 1 --na 1 --T 20 --Ndata 100 --Encode_type "Ry-pi-Rz-2pi" --batch_size 4 --L $l --seed $s  --lr 0.0005 --weight_t0 0.01  --problem "cluster" --loss_type "MMD" --epochs 20000
 done
 done
-done
+
 
 
 #for s in 1
